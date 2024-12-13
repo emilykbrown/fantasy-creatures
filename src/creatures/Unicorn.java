@@ -1,10 +1,11 @@
 package creatures;
 
-public class Unicorn extends Creature implements Ability {
+public class Unicorn extends Creature {
+
     private String hornColor;
 
     public Unicorn(String name, int age, String hornColor) {
-        super(name, age, "Unicorn");
+        super(name, age);
         this.hornColor = hornColor;
     }
 
@@ -17,7 +18,7 @@ public class Unicorn extends Creature implements Ability {
     }
 
     @Override
-    public void useAbility() {
-        System.out.println(getName() + " uses its magical " + hornColor + " horn to heal!");
+    public String toString() {
+        return "Name: " + getName() + ", Type: Unicorn, Age: " + getAge() + ", Horn color: " + hornColor;
     }
 }

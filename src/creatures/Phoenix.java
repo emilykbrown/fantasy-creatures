@@ -1,10 +1,11 @@
 package creatures;
 
-public class Phoenix extends Creature implements Ability {
+public class Phoenix extends Creature {
+
     private int lifeCycles;
 
     public Phoenix(String name, int age, int lifeCycles) {
-        super(name, age, "Phoenix");
+        super(name, age);
         this.lifeCycles = lifeCycles;
     }
 
@@ -17,7 +18,7 @@ public class Phoenix extends Creature implements Ability {
     }
 
     @Override
-    public void useAbility() {
-        System.out.println(getName() + " bursts into flames and is reborn! Remaining life cycles: " + lifeCycles);
+    public String toString() {
+        return "Name: " + getName() + ", Type: Phoenix, Age: " + getAge() + ", Life cycles: " + lifeCycles;
     }
 }

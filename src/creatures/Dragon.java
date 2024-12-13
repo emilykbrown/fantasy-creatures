@@ -1,10 +1,11 @@
 package creatures;
 
-public class Dragon extends Creature implements Ability {
+public class Dragon extends Creature {
+
     private int firePower;
 
     public Dragon(String name, int age, int firePower) {
-        super(name, age, "Dragon");
+        super(name, age);
         this.firePower = firePower;
     }
 
@@ -16,8 +17,9 @@ public class Dragon extends Creature implements Ability {
         this.firePower = firePower;
     }
 
+    // Override the toString() method to return the desired format
     @Override
-    public void useAbility() {
-        System.out.println(getName() + " breathes fire with power " + firePower + "!");
+    public String toString() {
+        return "Name: " + getName() + ", Type: Dragon, Age: " + getAge() + ", Fire power: " + firePower;
     }
 }

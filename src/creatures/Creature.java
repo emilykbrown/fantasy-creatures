@@ -1,7 +1,9 @@
 package creatures;
 
-public abstract class Creature {
+import java.io.Serializable;
 
+public abstract class Creature implements Serializable {
+    private static final long serialVersionUID = 1L; // A unique ID for serialization
     private String name;
     private int age;
 
@@ -10,6 +12,7 @@ public abstract class Creature {
         this.age = age;
     }
 
+    // Getters and setters
     public String getName() {
         return name;
     }
@@ -26,8 +29,8 @@ public abstract class Creature {
         this.age = age;
     }
 
-    @Override
-    public String toString() {
-        return "Creature [name=" + name + ", age=" + age + "]";
-    }
+    // Abstract methods for subclass-specific details
+    public abstract String getCreatureDetails();
+
+	dx abstract void displayInfo();
 }

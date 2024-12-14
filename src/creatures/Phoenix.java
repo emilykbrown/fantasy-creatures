@@ -21,4 +21,21 @@ public class Phoenix extends Creature {
     public String toString() {
         return "Name: " + getName() + ", Type: Phoenix, Age: " + getAge() + ", Life cycles: " + lifeCycles;
     }
+
+	@Override
+	public String getCreatureDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void displayInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setRebirthCycle(int newRebirthCycle) {
+		// TODO Auto-generated method stub
+		
+	}
 }

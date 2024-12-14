@@ -13,12 +13,24 @@ public class Unicorn extends Creature {
         return hornColor;
     }
 
-    public void setHornColor(String hornColor) {
-        this.hornColor = hornColor;
+    public void setHornColor(int newHornColor) {
+        this.hornColor = newHornColor;
     }
 
     @Override
     public String toString() {
         return "Name: " + getName() + ", Type: Unicorn, Age: " + getAge() + ", Horn color: " + hornColor;
     }
+
+	@Override
+	public String getCreatureDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void displayInfo() {
+		// TODO Auto-generated method stub
+		
+	}
 }

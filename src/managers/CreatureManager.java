@@ -15,8 +15,9 @@ public class CreatureManager {
         creatures.add(creature);
     }
 
-    public void removeCreatureByName(String name) {
+    public Creature removeCreatureByName(String name) {
         creatures.removeIf(c -> c.getName().equalsIgnoreCase(name));
+		return null;
     }
 
     public List<Creature> displayCreatures() {
@@ -24,10 +25,11 @@ public class CreatureManager {
         return creatures;
     }
 
-	public void displayCreaturesByType(int type) {
+	public void displayCreaturesByType(Class<?> filterType) {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 	public List<Creature> getAllCreatures() {
 		// TODO Auto-generated method stub
